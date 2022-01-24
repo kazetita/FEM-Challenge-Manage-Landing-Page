@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/kazetita/Frontend-Mentor-Challengue-Manage-Landing-Page-Master)
-- Live Site URL: [Add live site URL here](https://kazetita.github.io/Frontend-Mentor-Challengue-Manage-Landing-Page-Master/)
+- Solution URL: [https://github.com/kazetita/Frontend-Mentor-Challengue-Manage-Landing-Page-Master](https://github.com/kazetita/Frontend-Mentor-Challengue-Manage-Landing-Page-Master)
+- Live Site URL: [https://kazetita.github.io/Frontend-Mentor-Challengue-Manage-Landing-Page-Master/](https://kazetita.github.io/Frontend-Mentor-Challengue-Manage-Landing-Page-Master/)
 
 ## My process
 
@@ -47,7 +47,6 @@ Users should be able to:
 - Sass
 
 ### What I learned
-
 - Positioning of images in the background. Make images scale and reposition depending on screen size.
 - Use vainilla javascript to build a slider and make it responsive.
 - Mixing Sass.
@@ -60,5 +59,5 @@ Users should be able to:
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/kazetita)
+- Frontend Mentor - [@kazetita](https://www.frontendmentor.io/profile/kazetita)
 
