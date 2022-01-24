@@ -1,0 +1,55 @@
+@use "sass:map";
+@use "sass:list";
+@use "variables" as *;
+
+@mixin mq($label, $direction: "min") {
+  @if(not(map.has-key($breakpoints, $label))) {
+    @error "#{$label} is not a valid key in $breakpoints."
+  }
+  
+  @if(not (list.index(("max", "min"), $direction))) {
+    @error "Direction of media query must be min or max."
+  }
+  $width: map.get($breakpoints, $label);
+  @media screen and (#{$direction}-width: $width) {
+    @content;
+  }
+}
+
+@mixin pad($axis, $left-or-top, $right-or-bottom: $left-or-top) {
+  @if(not(list.index(("x", "y"), $axis))) {
+    @error "Yo must specify a correct axis to apply padding: x or y";
+  }
+
+  @if($axis == "x") {
+    padding-left: $left-or-top;
+    padding-right: $right-or-bottom;
+  } @else {
+    padding-top: $left-or-top;
+    padding-bottom: $right-or-bottom;
+  }
+}
+
+@mixin mar($axis, $left-or-top, $right-or-bottom: $left-or-top) {
+  @if(not(list.index(("x", "y"), $axis))) {
+    @error "Yo must specify a correct axis to apply margin: x or y";
+  }
+
+  @if($axis == "x") {
+    margin-left: $left-or-top;
+    margin-right: $right-or-bottom;
+  } @else {
+    margin-top: $left-or-top;
+    margin-bottom: $right-or-bottom;
+  }
+}
+
+@mixin flex($gap: 1rem) {
+  display: flex;
+  gap: $gap; 
+}
+
+@mixin flex-column($gap: 1rem) {
+  @include flex($gap);
+  flex-direction: column;
+}

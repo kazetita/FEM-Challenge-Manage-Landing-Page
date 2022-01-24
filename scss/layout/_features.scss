@@ -1,0 +1,84 @@
+@use "../utils" as *;
+
+.features {
+  margin-bottom: rem(90);
+
+  &__intro {
+    line-height: 1.6;
+    font-size: rem(15);
+    margin-bottom: rem(58);
+  }
+
+  &__title,
+  &__desc {
+    text-align: center;
+  }
+
+  &__list {
+    padding-left: rem(20);
+
+    .feature:not(:last-child) {
+      margin-bottom: var(--margin-b, rem(58));
+    }
+  }
+
+  @include mq("lg") {
+    margin-bottom: rem(172);
+
+    &__wrapper {
+      @include flex(0);
+    }
+
+    &__intro,
+    &__list {
+      flex-basis: 100%;
+    }
+
+    &__title,
+    &__desc {
+      text-align: left;
+    }
+
+    &__title {
+      line-height: normal;
+      margin-bottom: rem(32);
+    }
+
+    &__desc {
+     max-width: 32ch;
+    }
+
+    &__list {
+      padding-left: rem(26);
+    }
+  }
+}
+
+.feature {
+  font-size: rem(14);
+  line-height: 1.6;
+
+  &__header {
+    @include flex(rem(10));
+    align-items: center;
+    background-color: $clr-red-2;
+    border-top-left-radius: rem(100);
+    border-bottom-left-radius: rem(100);
+  }
+
+  @include mq("lg") {
+    position: relative;
+    font-size: rem(15);
+    padding-left: rem(95);
+
+    &__header {
+      background-color: transparent;
+
+      .badge-pill {
+        position: absolute;
+        left: 0;
+      }
+    }
+
+  }
+}

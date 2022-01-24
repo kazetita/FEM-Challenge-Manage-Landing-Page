@@ -1,0 +1,70 @@
+@use "../utils" as *;
+
+.slider {
+  position: relative;
+  height: var(--height, auto);
+  overflow-x: hidden;
+
+  &__items {
+    @include flex(0);
+    transition: 300ms transform ease-in-out;
+  }
+
+  &__slide {
+    flex: 1 0 100%;
+  }
+
+  &__dots {
+    position: absolute;
+    bottom: rem(24);
+    left: 50%;
+    transform: translateX(-50%);
+    @include flex(rem(4));
+  }
+
+  &__dot {
+    padding: rem(3);
+    border-radius: 50%;
+    border: 1px solid var(--border-color, $clr-red-1);
+    cursor: pointer;
+
+    &--active {
+      background-color: var(--bg-color, $clr-red-1);
+    }
+  }
+
+  @include mq("lg") {
+
+
+    &__items {
+      gap: 1rem;
+    }
+
+    &__slide {
+      max-width: rem(450);
+    }
+
+    &__dots {
+      display: none;
+    }
+
+    &--animate {
+      .slider__items {
+        animation-duration: calc(var(--slides-count, 1) * 6s);
+        animation-iteration-count: infinite;
+        animation-name: autoSlide;
+
+        &:hover,
+        &:focus {
+          animation-play-state: paused;
+        }
+      }
+      
+      @keyframes autoSlide {
+        0% { transform: translateX(0); }
+        50% { transform: translateX(var(--offsetX, 0)); }
+        100% { transform: translateX(0);}
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@use "../utils" as *;
+
+body {
+  font-size: $fs-body;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-weight: 400;
+  color: $clr-blue-2;
+}
+
+h1,
+h2, 
+h3,
+h4{
+  font-weight: 700;
+  color: $clr-blue-1;
+}
+
+h1 {
+  font-size: rem(36);
+
+  @include mq("lg") {
+    font-size: rem(50);
+  }
+}
+
+h2 {
+  font-size: rem(29);
+
+  @include mq("lg") {
+    font-size: rem(37);
+  }
+}
+
+h3 {
+  font-size: rem(15);
+}

@@ -1,0 +1,32 @@
+@use "../utils" as *;
+
+.socials {
+  --icon-size: #{rem(32)};
+
+  @include flex(var(--gap, 0));
+  justify-content: space-around;
+  align-items: flex-start;
+
+  &__link {
+    padding: rem(4);
+
+    &:hover,
+    &:focus{
+      .socials__icon {
+        fill: var(--icon-color-hover, $clr-red-1);
+      }
+    }
+  }
+
+  &__icon {
+    width: var(--icon-size);
+    height: var(--icon-size);
+    fill: var(--icon-color, #FFF);
+
+  }
+
+  @include mq("lg") {
+    --gap: #{rem(6)};
+    --icon-size: auto;
+  }
+}

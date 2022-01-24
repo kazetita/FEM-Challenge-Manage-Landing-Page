@@ -1,0 +1,23 @@
+@use "../utils" as *;
+
+.menu {
+  @include flex-column(var(--gap, 1rem));
+
+  &__link {
+    display: block;
+    text-decoration: none;
+    color: var(--color, $clr-blue-1);
+
+    &:hover,
+    &:focus{
+      color: var(--color-hover, $clr-blue-2);
+    }
+  }
+
+  &--inline-lg {
+    @include mq("lg") {
+      flex-direction: row;
+    }
+  }
+}
+

@@ -1,0 +1,37 @@
+@use "variables" as *;
+@use "mixins" as *;
+@use "functions" as *;
+
+.lg-hidden {
+  @include mq("lg") {
+    display: none;
+  }
+}
+
+.lg-only {
+  display: none;
+
+  @include mq("lg") {
+    display: block;
+  }
+}
+
+.container {
+  @include pad("x", rem(23));
+  @include mar("x", auto);
+  max-width: $s-desktop;
+
+  &--lg {
+    @include pad("x", 0);
+  }
+
+  @include mq("lg") {
+    @include pad("x", rem(163));
+    
+    &--sm {
+      @include pad("x", 0);
+    }
+  }
+
+}
+

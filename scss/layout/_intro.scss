@@ -1,0 +1,60 @@
+@use "../utils" as *;
+
+.intro {
+  padding-bottom: rem(100);
+
+  &__img {
+    margin-bottom: rem(22);
+    img {
+      @include mar("x", auto);
+    }
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__desc {
+    margin-bottom: rem(22);
+    text-align: center;
+    line-height: 1.7;
+  }
+
+  &__cta {
+    text-align: center;
+  }
+
+  @include mq("lg") {
+    padding-bottom: rem(110);
+    background-image: none;
+
+    &__wrapper {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+
+    &__img,
+    &__content {
+      flex-basis: 100%;
+    }
+
+    &__content {
+      align-self: center;
+    }
+
+    &__title {
+      text-align: left;
+      margin-bottom: rem(30);
+    }
+
+    &__desc {
+      margin-bottom: rem(30);
+      text-align: left;
+      max-width: 32ch;
+    }
+
+    &__cta {
+      text-align: left;
+    }
+  }
+}

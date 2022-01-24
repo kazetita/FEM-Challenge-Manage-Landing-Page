@@ -1,0 +1,80 @@
+@use "../utils" as *;
+
+.footer {
+  @include pad("y", rem(48));
+  background-color: $clr-blue-3;
+  font-size: rem(14);
+  text-align: center;
+
+  &__nav {
+    @include flex(0);
+    justify-content: space-around;
+    margin-bottom: rem(50);
+
+    .menu {
+      --gap: #{rem(16)};
+      --color: white;
+      --color-hover: #{$clr-red-1};
+      text-align: left;
+    }
+  }
+
+  &__copyright {
+    font-size: rem(12);
+  }
+
+  .form {
+    margin-bottom: rem(60);
+  }
+
+  .socials {
+    margin-bottom: rem(54);
+  }
+
+  .logo {
+    margin-bottom: rem(40);
+  }
+
+  @include mq("lg") {
+    @include pad("y", rem(64));
+
+    &__wrapper {
+      display: grid;
+      grid-row-gap: rem(60);
+      grid-template-columns: auto 1fr auto; 
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: 
+        "logo nav form"
+        "socials nav copy";
+    }
+
+    &__nav {
+      grid-area: nav;
+      margin: 0;
+    }
+    
+    &__copyright {
+      grid-area: copy;
+      min-width: max-content;
+      justify-self: end;
+      align-self: flex-start;
+      margin: 0;
+    }
+
+    .logo {
+      grid-area: logo;
+      margin: 0;
+    }
+
+    .form {
+      grid-area: form;
+      margin: 0;
+    }
+
+    .socials {
+      grid-area: socials;
+      margin: 0;
+    }
+
+  }
+}

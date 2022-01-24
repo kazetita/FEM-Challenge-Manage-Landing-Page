@@ -1,0 +1,40 @@
+@use "../utils" as *;
+.testimonials {
+  margin-bottom: rem(50);
+   
+  &__title {
+    margin-bottom: rem(60);
+    text-align: center;
+  }
+
+  &__cta {
+    text-align: center;
+  }
+
+  .slider {
+    margin-bottom: rem(20);
+  }
+
+  .testimony {
+    margin-bottom: rem(54);
+  }
+
+  @include mq("lg") {
+    margin-bottom: rem(182);
+    overflow-x: hidden;
+
+    &__title {
+      margin-bottom: rem(68);
+    }
+
+    .slider {
+      margin-bottom: rem(42);
+    }
+
+    .testimony {
+      margin-bottom: 0;
+    }
+  }
+
+}
+

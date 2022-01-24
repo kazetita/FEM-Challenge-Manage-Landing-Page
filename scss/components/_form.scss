@@ -1,0 +1,48 @@
+@use "../utils" as *;
+
+.form {
+  align-items: center;
+
+  &__group {
+    @include flex(rem(6));
+
+    &--error {
+      position: relative;
+
+      &::before {
+        content: attr(data-error-message);
+        position: absolute;
+        left: 1em;
+        top: 0;
+        transform: translateY(calc(-100% - #{rem(6)}));
+        color: $clr-red-1;
+      }
+
+      .form__input {
+        border: 2px solid $clr-red-1;
+        color: $clr-red-1;
+      }
+
+    }
+  }
+
+  &__input,
+  &__btn {
+    font-size: rem(13);
+  }
+
+  &__input {
+    position: relative;
+    flex-grow: 1;
+    padding: 1em 1.6em;
+    font-weight: 500;
+    border-radius: rem(200);
+    border: none;
+    outline: none;
+  }
+
+  &__btn {
+    padding: 1em 2em;
+  }
+
+}

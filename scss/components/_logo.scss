@@ -1,0 +1,15 @@
+@use "../utils" as *;
+
+.logo {
+  display: inline-block;
+
+  &--fluid {
+    img,
+    svg {
+      @include mq("lg", "max") {
+        width: rem(110);
+        height: auto;
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@use "functions" as *;
+
+$s-mobile: rem(375);
+$s-desktop: rem(1440);
+
+// Primary colors
+$clr-red-1: hsl(12, 88%, 59%);
+$clr-blue-1: hsl(228, 39%, 23%);
+
+// Neutral colors
+$clr-blue-2: hsl(227, 12%, 61%);
+$clr-blue-3: hsl(233, 12%, 13%);
+$clr-red-2: hsl(13, 100%, 96%);
+$clr-gray-1: hsl(0, 0%, 98%);
+
+$fs-body: rem(16);
+
+$breakpoints: (
+  "md": rem(750),
+  "lg": rem(1100)
+);

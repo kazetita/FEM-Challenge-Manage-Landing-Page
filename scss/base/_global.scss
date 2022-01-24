@@ -1,0 +1,18 @@
+@use "../utils" as *;
+
+body {
+  background-image: url(../images/bg-tablet-pattern.svg), url(../images/bg-tablet-pattern.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-size: 120%, 75%; 
+  background-position: right -30vw top -30vw, right -40vw top 18%;  
+  
+  @include mq("md") {
+    background-size: 85%, 55%;
+    background-position: right -65% top -8%, right -40vw top 18%;
+  }
+
+  @include mq("lg") {
+    background-size: 55%, 55%;
+    background-position: right -22% top -8%, -74% 60%;
+  }
+}

@@ -1,0 +1,67 @@
+@use "../utils" as *;
+
+.header {
+  @include pad("y", rem(44));
+
+  @include mq("lg") {
+    @include pad("y", rem(58));
+    margin-bottom: rem(50);
+  }
+}
+
+.primary-nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__toggle {
+    width: rem(25);
+    height: rem(20);
+    background-image: url(../images/icon-hamburger.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    border: none;
+
+    &[aria-expanded="true"] {
+      background-image: url(../images/icon-close.svg);
+    }
+  }
+
+  &__menu {
+   font-size: rem(12);
+   font-weight: 500;
+  }
+
+  .menu {
+    --gap: 2.8em;
+  }
+
+  @include mq("lg", "max") {
+    &__menu {
+      @include pad("y", rem(28));
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: calc(100% + #{rem(40)});
+      background-color: white;
+
+      &[data-visible="false"] {
+        display: none;
+      }
+    }
+
+    .menu {
+      --gap: 0;
+
+      &__link {
+        @include pad("y", rem(14));
+        font-size: rem(15);
+        font-weight: 700;
+        text-align: center;
+      }
+    }
+  }
+}
+

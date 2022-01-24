@@ -1,0 +1,45 @@
+@use "../utils" as *;
+
+.outro {
+  background-color: $clr-red-1;
+  background-image: url(../images/bg-simplify-section-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: left center;
+  
+  &__wrapper{
+    @include pad("y", rem(100), rem(90));
+  }
+
+  &__title {
+    @include mar("y", 0, rem(26));
+    text-align: center;
+    font-size: rem(37);
+    font-weight: 700;
+    color: white;
+  }
+
+  &__cta {
+    text-align: center;
+  }
+
+  @include mq("lg") {
+    background-image: url(../images/bg-simplify-section-desktop.svg);
+    background-size: 100%;
+    background-position: bottom right calc(-1 * #{rem(252)});
+
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      @include pad("y", rem(68), rem(34));
+    }
+
+    &__title {
+      max-width: 18ch;
+      text-align: left;
+    }
+
+    &__cta {
+      margin-top: rem(20);
+    }
+  }
+}

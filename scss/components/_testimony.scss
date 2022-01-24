@@ -1,0 +1,31 @@
+@use "../utils" as *;
+
+.testimony {
+  $photo-size: rem(75);
+  position: relative;
+  margin-top: calc(#{$photo-size} / 2);
+  padding-top: rem(60); 
+  padding-bottom: rem(30);
+  @include pad("x", rem(14));
+  line-height: 1.8;
+  background-color: $clr-gray-1;
+
+  &__photo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: $photo-size;
+    height: $photo-size;
+  }
+
+  &__name {
+    margin-bottom: rem(20);
+    text-align: center;
+  }
+
+  &__desc {
+    font-size: rem(14);
+    text-align: center;
+  }
+}
