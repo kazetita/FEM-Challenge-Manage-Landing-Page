@@ -12,6 +12,7 @@ This is a solution to the [Manage landing page challenge on Frontend Mentor](htt
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
 
 ## Overview
 
@@ -32,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/kazetita/Frontend-Mentor-Challengue-Manage-Landing-Page-Master](https://github.com/kazetita/Frontend-Mentor-Challengue-Manage-Landing-Page-Master)
-- Live Site URL: [https://kazetita.github.io/Frontend-Mentor-Challengue-Manage-Landing-Page-Master/](https://kazetita.github.io/Frontend-Mentor-Challengue-Manage-Landing-Page-Master/)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/manage-landing-page-with-sassscss-xlrI79rGD)
+- Live Site URL: [Preview](https://kazetita.github.io/Frontend-Mentor-Challengue-Manage-Landing-Page-Master/)
 
 ## My process
 
@@ -44,18 +45,21 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- Sass
+- SASS/SCSS
 
 ### What I learned
-- Positioning of images in the background. Make images scale and reposition depending on screen size.
+- Make background images scale and reposition depending on screen size.
 - Use vainilla javascript to build a slider and make it responsive.
-- Mixing Sass.
 - Combine Sass variables and custom properties.
 
 ### Continued development
 
 - Finding an easier technique to make background images responsives.
 - Apply a diferent css methodology to organize css, like itcss.
+
+### Useful resources
+
+- [sr-only](https://gist.github.com/ffoodd/000b59f431e3e64e4ce1a24d5bb36034) - This helped me fix accesibility problems in my links.
 
 ## Author
 
