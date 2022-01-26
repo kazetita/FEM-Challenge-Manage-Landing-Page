@@ -34,7 +34,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/manage-landing-page-with-sassscss-xlrI79rGD)
-- Live Site URL: [Preview](https://kazetita.github.io/Frontend-Mentor-Challengue-Manage-Landing-Page-Master/)
+- Live Site URL: [Preview](https://kazetita.github.io/FEM-Challenge-Manage-Landing-Page/)
 
 ## My process
 
